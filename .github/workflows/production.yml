@@ -1,7 +1,7 @@
 name: production
 on:
   push:
-    branches: main
+    branches: [main]
 jobs:
   publish-hello-docker-image:
     runs-on: ubuntu-latest
