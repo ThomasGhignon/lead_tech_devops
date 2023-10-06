@@ -1,18 +1,40 @@
 on: ["push", "pull_request"]
+<<<<<<< HEAD
 name: test-coveralls
 jobs:
+=======
+
+name: Test Coveralls
+
+jobs:
+
+>>>>>>> develop
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
+<<<<<<< HEAD
     - uses: actions/checkout@v1
+=======
+
+    - uses: actions/checkout@v1
+
+>>>>>>> develop
     - name: Use Node.js 16.x
       uses: actions/setup-node@v3
       with:
         node-version: 16.x
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
     - name: npm install, make test-coverage
       run: |
         npm install
         make test-coverage
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
     - name: Coveralls
       uses: coverallsapp/github-action@v2
