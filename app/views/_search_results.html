@@ -7,7 +7,7 @@
   <div class="panel-body">
 
     <% if (photos.length) { %>
-
+    <form method='POST' action="/zip">
       <ul>
         <% photos.forEach(function (photo) { %>
           <li class="list-unstyled">
@@ -18,11 +18,14 @@
           </li>
         <% }) %>
       </ul>
-
+      <button type="submit" class="btn btn-primary">ZIP</button>
+    </form>
+      <% if (download.length) { %>
+        <a href="<%= download %>" class="btn btn-primary">Download</a>
+      <% } %>
     <% } else { %>
       <div class="alert alert-info"><strong>No results</strong></div>
     <% } %>
-
   </div>
 
 </div>
